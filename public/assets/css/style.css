@@ -36,6 +36,7 @@ header nav {
     width: 100%;
     top: 10rem;
     transition: .6s all;
+    z-index: 0;
 }
 
 #navMenu li {
@@ -50,9 +51,11 @@ header nav {
     overflow: hidden;
     transition: .4s all;
     background-color: #fff;
+    z-index: 2;
 }
 
 .hideSubMenu {
+    left: 5rem;
     max-height: 0px;
 }
 
@@ -89,10 +92,12 @@ header nav {
 
     .subMenu {
         top: 3rem;
-        
     }
 
     .showSubMenu {
+        left: 0rem;
+    }
+    .hideSubMenu{
         left: 0rem;
     }
 
