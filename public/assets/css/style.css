@@ -1,19 +1,22 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-img,input{
+
+img,
+input {
     width: 100%;
 }
-header nav{
+
+header nav {
     position: relative;
     display: flex;
     justify-content: space-between;
 }
-#navMenu{
-    position :absolute;
+
+#navMenu {
+    position: absolute;
     display: flex;
     flex-direction: column;
     top: 3.5rem;
@@ -25,19 +28,22 @@ header nav{
 
     transition: .6s all;
 }
-#user{
-    position :absolute;
+
+#user {
+    position: absolute;
     left: 0;
     background-color: #fff;
     width: 100%;
     top: 10rem;
     transition: .6s all;
 }
-#navMenu li{
+
+#navMenu li {
     padding: .5rem;
     position: relative;
 }
-.subMenu{
+
+.subMenu {
     position: absolute;
     border: .1px solid fuchsia;
     top: 0rem;
@@ -45,34 +51,52 @@ header nav{
     transition: .4s all;
     background-color: #fff;
 }
-.hideSubMenu{
+
+.hideSubMenu {
     max-height: 0px;
 }
-.showSubMenu{
-    left:5rem;
+
+.showSubMenu {
+    left: 5rem;
     max-height: 500px;
 }
-.slideRight{
+
+.slideRight {
     transform: translateX(0);
 }
-.slideLeft{
+
+.slideLeft {
     transform: translateX(-100%);
 }
 
 @media screen and (min-width:576px) {
-    #navMenu{
+    #navMenu {
         display: flex;
+        flex-direction: row;
+        position: static;
+        width: fit-content;
     }
-    #user{
+
+    #user {
         display: block;
+        position: static;
+        width: fit-content;
     }
-    #burger{
+
+    #burger {
         display: none;
     }
-    .subMenu{
-        top: 3rem; 
+
+    .subMenu {
+        top: 3rem;
+        
     }
-    .showSubMenu{
-        left:0rem;
+
+    .showSubMenu {
+        left: 0rem;
+    }
+
+    .slideLeft {
+        transform: translateX(0);
     }
 }
