@@ -8,16 +8,30 @@ img,input{
     width: 100%;
 }
 header nav{
+    position: relative;
     display: flex;
     justify-content: space-between;
 }
 #navMenu{
-    display: none;
+    position :absolute;
+    display: flex;
+    flex-direction: column;
+    top: 3.5rem;
     justify-content: space-between;
     list-style-type: none;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+
+    transition: .6s all;
 }
 #user{
-    display: none;
+    position :absolute;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    top: 10rem;
+    transition: .6s all;
 }
 #navMenu li{
     padding: .5rem;
@@ -26,7 +40,7 @@ header nav{
 .subMenu{
     position: absolute;
     border: .1px solid fuchsia;
-    top: 3rem;
+    top: 0rem;
     overflow: hidden;
     transition: .4s all;
     background-color: #fff;
@@ -35,7 +49,14 @@ header nav{
     max-height: 0px;
 }
 .showSubMenu{
+    left:5rem;
     max-height: 500px;
+}
+.slideRight{
+    transform: translateX(0);
+}
+.slideLeft{
+    transform: translateX(-100%);
 }
 
 @media screen and (min-width:576px) {
@@ -47,5 +68,11 @@ header nav{
     }
     #burger{
         display: none;
+    }
+    .subMenu{
+        top: 3rem; 
+    }
+    .showSubMenu{
+        left:0rem;
     }
 }

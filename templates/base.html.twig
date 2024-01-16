@@ -20,14 +20,14 @@
     <header>
         <nav>
             <div>Logo</div>
-            <ul id="navMenu"></ul>
+            <ul id="navMenu" class="slideLeft"></ul>
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                <div id="user">
+                <div id="user" class="slideLeft">
                     <span>{{ app.user.nom }}</span>
                     <a href="{{ path('app_logout')}}">LogOut</a>
                 </div>
             {% else %}
-                <div id="user">
+                <div id="user" class="slideLeft">
                     <a href="{{ path('app_register')}}">Register</a>
                     <a href="{{ path('app_login')}}">LogOut</a>
                 </div>

@@ -3,9 +3,13 @@ const burgerManager = ()=>{
     const burger = document.getElementById("burger");
     const navMenu = document.getElementById("navMenu");
     const user = document.getElementById("user");
-    let displayMenu = false;
+    //let displayMenu = false;
     burger.addEventListener("click",()=>{
-        displayMenu = !displayMenu;
+        navMenu.classList.toggle("slideRight");
+        navMenu.classList.toggle("slideLeft");
+        user.classList.toggle("slideRight");
+        user.classList.toggle("slideLeft");
+        /* displayMenu = !displayMenu;
         if(displayMenu){
             navMenu.style.display = "flex";
             navMenu.style.flexDirection = "column";
@@ -13,7 +17,7 @@ const burgerManager = ()=>{
         } else {
             navMenu.style.display = "none";
             user.style.display = "none"
-        }
+        } */
     })
 }
 export { burgerManager }
