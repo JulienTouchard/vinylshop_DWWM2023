@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+    {% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('./assets/css/style.css')}}">
+    {% endblock %}
+
+    {% block javascripts %}
+    <script type="module" src="{{ asset('./assets/js/script.js')}}" defer></script>
+    {% endblock %}
+    
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>Logo</div>
+            <ul id="navMenu"></ul>
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                <div id="user">
+                    <span>{{ app.user.nom }}</span>
+                    <a href="{{ path('app_logout')}}">LogOut</a>
+                </div>
+            {% else %}
+                <div id="user">
+                    <a href="{{ path('app_register')}}">Register</a>
+                    <a href="{{ path('app_login')}}">LogOut</a>
+                </div>
+            {% endif %}
+            <div id="burger">burger</div>
+        </nav>
+    </header>
+    {% block body %}{% endblock %}
+    <footer>
+        Hello footer
+    </footer>
+</body>
+
+</html>
