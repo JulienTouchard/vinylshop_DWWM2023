@@ -79,13 +79,11 @@ header nav {
         position: static;
         width: fit-content;
     }
-
     #user {
         display: block;
         position: static;
         width: fit-content;
     }
-
     #burger {
         display: none;
     }
@@ -100,7 +98,6 @@ header nav {
     .hideSubMenu{
         left: 0rem;
     }
-
     .slideLeft {
         transform: translateX(0);
     }
